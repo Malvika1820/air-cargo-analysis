@@ -1,0 +1,21 @@
+airport_code,airport_name,city,country,timezone
+JFK,John F. Kennedy Intl,New York,USA,UTC
+LAX,Los Angeles Intl,Los Angeles,USA,UTC
+ORD,O'Hare Intl,Chicago,USA,UTC
+ATL,Hartsfield-Jackson Intl,Atlanta,USA,UTC
+DFW,Dallas Fort Worth Intl,Dallas,USA,UTC
+DEL,Indira Gandhi Intl,Delhi,India,UTC
+BOM,Chhatrapati Shivaji Intl,Mumbai,India,UTC
+BLR,Kempegowda Intl,Bengaluru,India,UTC
+LHR,Heathrow,London,UK,UTC
+CDG,Charles de Gaulle,Paris,France,UTC
+FRA,Frankfurt Airport,Frankfurt,Germany,UTC
+DXB,Dubai Intl,Dubai,UAE,UTC
+SIN,Changi Airport,Singapore,Singapore,UTC
+HKG,Hong Kong Intl,Hong Kong,China,UTC
+NRT,Narita Intl,Tokyo,Japan,UTC
+SYD,Kingsford Smith,Sydney,Australia,UTC
+GRU,Guarulhos Intl,Sao Paulo,Brazil,UTC
+JNB,O.R. Tambo Intl,Johannesburg,South Africa,UTC
+YYZ,Toronto Pearson,Toronto,Canada,UTC
+AMS,Schiphol,Amsterdam,Netherlands,UTC

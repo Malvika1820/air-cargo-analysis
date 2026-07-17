@@ -1,0 +1,8 @@
+aircraft_code,model,range_km,total_seats
+321,Airbus A321,5600,180
+32N,Airbus A320neo,6500,165
+77W,Boeing 777-300ER,13650,350
+789,Boeing 787-9,14140,290
+388,Airbus A380,15200,500
+738,Boeing 737-800,5765,160
+CR9,Bombardier CRJ-900,2956,90

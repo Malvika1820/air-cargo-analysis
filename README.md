@@ -24,7 +24,7 @@ trends, and the operational drivers behind customer complaints.
 ## Schema
 9 tables modeling a real-world airline reservation system: `airports_data`,
 `aircrafts_data`, `seats`, `flights`, `bookings`, `tickets`, `ticket_flights`,
-`boarding_passes`, `complaints`. Full ERD in [`docs/ERD.md`](docs/ERD.md).
+`boarding_passes`, `complaints`.
 
 ## Key Findings
 
@@ -110,3 +110,27 @@ Data was engineered to reflect realistic seasonal patterns: seat-load factors
 and booking-channel mix shift over the year, and complaint rates correlate
 with flight delay/cancellation status — mirroring how a real airline dataset
 behaves after an operational improvement initiative.
+## Data Availability
+To keep the repo lightweight, only the small reference tables (`airports_data`,
+`aircrafts_data`, `seats`, `flights`) are included in `data/`. The larger
+transactional tables (`bookings`, `tickets`, `ticket_flights`,
+`boarding_passes`, `complaints` — ~250K rows each) are generated locally
+rather than committed to version control.
+
+To regenerate the full dataset:
+```bash
+pip install pandas numpy
+python scripts/generate_data.py
+```
+This produces all 9 CSVs in `data/`, ready to import into PostgreSQL following
+the steps below.
+
+## How to Reproduce
+1. Create a PostgreSQL database (e.g. via [Supabase](https://supabase.com), free tier)
+2. Run `sql/01_schema.sql` in the SQL editor
+3. Generate the full dataset (see "Data Availability" above), or use the four
+   included reference CSVs plus your own transactional data
+4. Import each CSV into its matching table, in this order (foreign key
+   dependencies): `airports_data → aircrafts_data → seats → flights →
+   bookings → tickets → ticket_flights → boarding_passes → complaints`
+5. Run the queries in `sql/02_analysis_queries.sql`
